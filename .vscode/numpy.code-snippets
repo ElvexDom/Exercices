@@ -1,0 +1,93 @@
+{
+  "numpy_import": {
+    "prefix": "numpy_import",
+    "body": [
+      "import numpy as np"
+    ],
+    "description": "Importe NumPy avec l'alias np"
+  },
+  "numpy_tableau_entiers": {
+    "prefix": "numpy_tableau_entiers",
+    "body": [
+      "def tableau_entiers_intervalle(start, stop):",
+      "    return np.arange(start, stop)"
+    ],
+    "description": "Crée un tableau d'entiers dans un intervalle donné"
+  },
+  "numpy_tableau_flottants": {
+    "prefix": "numpy_tableau_flottants",
+    "body": [
+      "def tableau_flottants_aleatoires(n):",
+      "    return np.random.rand(n)"
+    ],
+    "description": "Crée un tableau de flottants aléatoires"
+  },
+  "numpy_somme": {
+    "prefix": "numpy_somme",
+    "body": [
+      "def somme_tableau(tableau):",
+      "    return np.sum(tableau)"
+    ],
+    "description": "Calcule la somme des éléments d'un tableau"
+  },
+  "numpy_produit_scalaire": {
+    "prefix": "numpy_produit_scalaire",
+    "body": [
+      "def produit_scalaire(tableau_A, tableau_B):",
+      "    if tableau_A.shape != tableau_B.shape:",
+      "        raise ValueError('Les deux tableaux doivent avoir la même dimension.')",
+      "    return np.dot(tableau_A, tableau_B)"
+    ],
+    "description": "Calcule le produit scalaire de deux tableaux"
+  },
+  "numpy_elements_uniques": {
+    "prefix": "numpy_elements_uniques",
+    "body": [
+      "def elements_uniques(tableau):",
+      "    return np.unique(tableau)"
+    ],
+    "description": "Renvoie les éléments uniques d'un tableau"
+  },
+  "numpy_trier": {
+    "prefix": "numpy_trier",
+    "body": [
+      "def trier_tableau(tableau):",
+      "    return np.sort(tableau)"
+    ],
+    "description": "Trie les éléments d'un tableau par ordre croissant"
+  },
+  "numpy_statistiques": {
+    "prefix": "numpy_statistiques",
+    "body": [
+      "def statistiques_tableau(tableau):",
+      "    return np.mean(tableau), np.median(tableau), np.std(tableau)"
+    ],
+    "description": "Renvoie la moyenne, la médiane et l'écart-type d'un tableau"
+  },
+  "numpy_binariser": {
+    "prefix": "numpy_binariser",
+    "body": [
+      "def binariser_tableau(tableau, seuil):",
+      "    resultat = np.zeros_like(tableau)",
+      "    resultat[tableau >= seuil] = 1",
+      "    return resultat"
+    ],
+    "description": "Binarise un tableau selon un seuil donné"
+  },
+  "numpy_nombres_premiers": {
+    "prefix": "numpy_nombres_premiers",
+    "body": [
+      "def nombres_premiers_tableau(tableau):",
+      "    return np.array([n for n in tableau if n > 1 and all(n % i != 0 for i in range(2, n))])"
+    ],
+    "description": "Renvoie les nombres premiers d'un tableau"
+  },
+  "numpy_tableau_2D": {
+    "prefix": "numpy_tableau_2D",
+    "body": [
+      "def tableau_2D_aleatoire(lignes, colonnes, min_val, max_val):",
+      "    return np.random.randint(min_val, max_val + 1, size=(lignes, colonnes))"
+    ],
+    "description": "Crée un tableau 2D aléatoire avec des entiers entre min_val et max_val"
+  }
+}
