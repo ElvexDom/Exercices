@@ -1,0 +1,163 @@
+{
+  "pyplot_import": {
+    "prefix": "pyplot_import",
+    "body": [
+      "import matplotlib.pyplot as plt"
+    ],
+    "description": "Importe Matplotlib.pyplot avec l'alias plt"
+  },
+  "pyplot_lineaire": {
+    "prefix": "pyplot_lineaire",
+    "body": [
+      "def tracer_graphe_lineaire(x, y):",
+      "    plt.plot(x, y, marker='o', linestyle='-', color='red', label='y = f(x)')",
+      "    plt.title('Graphe linéaire de y = f(x)')",
+      "    plt.xlabel('x')",
+      "    plt.ylabel('y')",
+      "    plt.legend()",
+      "    plt.grid(True)",
+      "    plt.show()",
+      "# tracer_graphe_lineaire([0, 1, 2, 3, 4], [1, 4, 3, 8, 5])"
+    ],
+    "description": "Trace un graphe linéaire à partir de points x et y"
+  },
+  "pyplot_histogramme": {
+    "prefix": "pyplot_histogramme",
+    "body": [
+      "def tracer_histogramme(n):",
+      "    valeurs = np.random.randn(n)",
+      "    plt.hist(valeurs, bins=50, color='blue', edgecolor='black')",
+      "    plt.title('Histogramme de données aléatoires')",
+      "    plt.xlabel('Valeurs')",
+      "    plt.ylabel('Fréquence')",
+      "    plt.show()",
+      "# tracer_histogramme(10000)"
+    ],
+    "description": "Trace un histogramme de n valeurs aléatoires"
+  },
+  "pyplot_barres": {
+    "prefix": "pyplot_barres",
+    "body": [
+      "def tracer_barres(categories, valeurs):",
+      "    bars = plt.bar(categories, valeurs, color='skyblue', edgecolor='black')",
+      "    plt.bar_label(bars, labels=[str(v) for v in valeurs], label_type='edge')",
+      "    plt.title('Diagramme à barres')",
+      "    plt.xlabel('Catégories')",
+      "    plt.ylabel('Valeurs')",
+      "    plt.show()",
+      "# tracer_barres(['A', 'B', 'C', 'D', 'E'], [25, 30, 15, 20, 10])"
+    ],
+    "description": "Trace un diagramme à barres"
+  },
+  "pyplot_nuage_points": {
+    "prefix": "pyplot_nuage_points",
+    "body": [
+      "def tracer_nuage_points(n):",
+      "    x = np.random.rand(n)",
+      "    y = np.random.rand(n)",
+      "    plt.scatter(x, y, color='red', marker='o', alpha=1)",
+      "    plt.title('Nuage de points')",
+      "    plt.xlabel('x')",
+      "    plt.ylabel('y')",
+      "    plt.show()",
+      "# tracer_nuage_points(100)"
+    ],
+    "description": "Trace un nuage de points aléatoires"
+  },
+  "pyplot_sinus": {
+    "prefix": "pyplot_sinus",
+    "body": [
+      "def tracer_sinus():",
+      "    x = np.linspace(0, 2*np.pi, 100)",
+      "    y = np.sin(x)",
+      "    plt.plot(x, y, color='blue', linewidth=2, label='sin(x)')",
+      "    plt.title('Courbe sinusoïdale')",
+      "    plt.xlabel('x')",
+      "    plt.ylabel('y')",
+      "    ticks = [0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi]",
+      "    labels = ['0', 'π/2', 'π', '3π/2', '2π']",
+      "    plt.xticks(ticks, labels)",
+      "    plt.legend()",
+      "    plt.grid(True)",
+      "    plt.show()",
+      "# tracer_sinus()"
+    ],
+    "description": "Trace une courbe sinusoïdale"
+  },
+  "pyplot_deux_courbes": {
+    "prefix": "pyplot_deux_courbes",
+    "body": [
+      "def tracer_deux_courbes(x, y1_func, y2_func, label1='Courbe 1', label2='Courbe 2', titre='Deux courbes'):",
+      "    plt.plot(x, y1_func(x), label=label1, linewidth=2)",
+      "    plt.plot(x, y2_func(x), label=label2, linewidth=2)",
+      "    plt.title(titre)",
+      "    plt.xlabel('x')",
+      "    plt.ylabel('y')",
+      "    plt.legend()",
+      "    plt.grid(True)",
+      "    plt.show()",
+      "# tracer_deux_courbes(np.linspace(0,10,100), lambda x: np.sin(x), lambda x: np.cos(x), label1='sin(x)', label2='cos(x)', titre='Courbes sin(x) et cos(x)')"
+    ],
+    "description": "Trace deux courbes sur le même graphique"
+  },
+  "pyplot_camembert": {
+    "prefix": "pyplot_camembert",
+    "body": [
+      "def tracer_camembert(categories, valeurs):",
+      "    plt.pie(valeurs, labels=categories, autopct='%1.0f%%', startangle=90)",
+      "    plt.title('Diagramme en secteurs')",
+      "    plt.show()",
+      "# tracer_camembert(['A','B','C','D'], [30,25,15,20])"
+    ],
+    "description": "Trace un diagramme en secteurs"
+  },
+  "pyplot_polynome": {
+    "prefix": "pyplot_polynome",
+    "body": [
+      "def tracer_polynome(x, coefficients, label='y = f(x)'):",
+      "    y = np.polyval(coefficients, x)",
+      "    plt.plot(x, y, label=label, color='purple', linewidth=2)",
+      "    plt.title('Courbe polynomiale')",
+      "    plt.xlabel('x')",
+      "    plt.ylabel('y')",
+      "    plt.legend()",
+      "    plt.grid(True)",
+      "    plt.show()",
+      "# tracer_polynome(np.linspace(-5,5,100), [3,2,-8,5], label='y = 3x^3 + 2x^2 - 8x + 5')"
+    ],
+    "description": "Trace une courbe polynomiale"
+  },
+  "pyplot_barres_empilees": {
+    "prefix": "pyplot_barres_empilees",
+    "body": [
+      "def tracer_barres_empilees(categories, valeurs1, valeurs2, label1='Groupe 1', label2='Groupe 2'):",
+      "    x = np.arange(len(categories))",
+      "    bars1 = plt.bar(x, valeurs1, label=label1, color='skyblue')",
+      "    bars2 = plt.bar(x, valeurs2, bottom=valeurs1, label=label2, color='orange')",
+      "    plt.bar_label(bars1, labels=[str(v) for v in valeurs1], label_type='center')",
+      "    plt.bar_label(bars2, labels=[str(v) for v in valeurs2], label_type='center')",
+      "    plt.xticks(x, categories)",
+      "    plt.title('Diagramme en barres empilées')",
+      "    plt.xlabel('Catégories')",
+      "    plt.ylabel('Valeurs')",
+      "    plt.legend()",
+      "    plt.show()",
+      "# tracer_barres_empilees(['A','B','C','D'], [10,15,20,25], [5,10,15,20], label1='Valeurs 1', label2='Valeurs 2')"
+    ],
+    "description": "Trace un diagramme en barres empilées"
+  },
+  "pyplot_boxplot": {
+    "prefix": "pyplot_boxplot",
+    "body": [
+      "def tracer_boxplot(series):",
+      "    labels = list(series.keys())",
+      "    data = list(series.values())",
+      "    plt.boxplot(data, tick_labels=labels, patch_artist=True)",
+      "    plt.title('Graphique en boîte')",
+      "    plt.ylabel('Valeurs')",
+      "    plt.show()",
+      "# tracer_boxplot({'Série 1': np.random.normal(0,1,100), 'Série 2': np.random.normal(2,1,100), 'Série 3': np.random.normal(-3,2,100)})"
+    ],
+    "description": "Trace un boxplot pour plusieurs séries"
+  }
+}
